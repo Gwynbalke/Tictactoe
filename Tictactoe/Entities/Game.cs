@@ -6,8 +6,8 @@ namespace Tictactoe.Entities
     {
         public int Id { get; set; }
         
-        public int PlayerXid { get; set; }
-        public int PlayerYid { get; set; }
+        public string PlayerXid { get; set; }
+        public string PlayerYid { get; set; }
         public VariantType board { get; set; }
         public int winner { get; set; }
         public DateTime date { get; set; }

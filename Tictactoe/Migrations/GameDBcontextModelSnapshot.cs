@@ -31,11 +31,13 @@ namespace Tictactoe.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("PlayerXid")
-                        .HasColumnType("int");
+                    b.Property<string>("PlayerXid")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("PlayerYid")
-                        .HasColumnType("int");
+                    b.Property<string>("PlayerYid")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("board")
                         .HasColumnType("int");
